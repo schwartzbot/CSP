@@ -19,8 +19,16 @@ painter.forward(20)
 painter.right(90)
 painter.forward(20)
 painter.right(90)
-painter.forward(20)python 1_1_1pltw.python
+painter.forward(20)
 
+painter.penup()
+painter.goto(-200,-200)
+painter.pendown()
+painter.forward(20)
+painter.right(120)
+painter.forward(20)
+painter.right(120)
+painter.forward(20)
 
 wn = trtl.Screen()
 wn.mainloop()
