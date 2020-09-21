@@ -65,9 +65,13 @@ while (g < 7):
     else:
         painter.fillcolor("blue")
         painter.end_fill()
-painter.goto(0, -100)
-painter.pensize(10)
+
+painter.penup()
+painter.goto(0, -250)
+painter.pensize(20)
 painter.pencolor("green")
-painter.circle(1, 20)
+painter.pendown()
+painter.circle(60, 40)
+
 wn = trtl.Screen()
 wn.mainloop()
