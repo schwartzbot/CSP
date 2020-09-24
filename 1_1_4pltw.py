@@ -1,10 +1,10 @@
 import turtle as trtl
 
 painter = trtl.Turtle()
-painter.speed(50)
+painter.speed(0)
 
 loop = 5
-
+#zero iteration
 while (loop < 5):
     painter.goto(0,0)
     painter.right(20)
@@ -19,6 +19,7 @@ while (loop < 5):
         painter.color("salmon")
 
 loop2 = 5
+#infinite interation
 while (loop2 < 4):
     painter.goto(0,0)
     painter.right(20)
@@ -31,3 +32,6 @@ while (loop2 < 4):
         painter.color("navy")
     if (line % 36 == 0):
         painter.color("salmon")
+
+wn = trtl.Screen()
+wn.mainloop()
