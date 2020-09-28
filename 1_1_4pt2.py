@@ -8,11 +8,17 @@ painter.penup()
 
 y = 200
 x = -200
-while (y > 0):
-    y = y - 50
+while (x < 200):
+    x = x + 50
+    y = 200
     painter.goto(x, y)
-    painter.color("blue")
+    painter.color("cyan")
     painter.stamp()
+    while (y > 0):
+        y = y - 50
+        painter.goto(x, y)
+        painter.color("blue")
+        painter.stamp()
 
 wn = trtl.Screen()
 wn.mainloop()
