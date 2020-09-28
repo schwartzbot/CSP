@@ -7,7 +7,7 @@ painter.hideturtle()
 painter.penup()
 
 y = 200
-x = -100
+x = -200
 while (y > 0):
     y = y - 50
     painter.goto(x, y)
