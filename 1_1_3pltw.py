@@ -41,7 +41,7 @@ while (row2 < 10):
     painter.pendown()
     painter.begin_fill()
     painter.circle(20)
-    row2 = s + 1
+    row2 = row2 + 1
     if (row2 % 2 == 0):
         painter.fillcolor("cyan")
         painter.end_fill()
