@@ -49,7 +49,7 @@ while (row2 < 10):
         painter.fillcolor("yellow")
         painter.end_fill()
 painter.goto(0, -45)
-row2 = 0
+row3 = 0
 while (row3 < 7):
     painter.penup()
     painter.forward(15)
