@@ -8,30 +8,30 @@ painter.pendown()
 painter.speed(0)
 x = -200
 y = 0
-move_x = 1
-move_y = 1
+xCord = 1
+yCord = 1
 while (x < 200):
   while (y < 100):
-    x = x + move_x
-    y = y + move_y
+    x = x + xCord
+    y = y + yCord
     painter.goto(x,y)
-  move_y = -1
+  yCord = -1
   while (y > 0):
-    x = x + move_x
-    y = y + move_y
+    x = x + xCord
+    y = y + yCord
     painter.goto(x,y)
-  move_y = 1
+  yCord = 1
 while(x>-200):
     while (y > -100):
-        x = x - move_x
-        y = y - move_y
+        x = x - xCord
+        y = y - yCord
         painter.goto(x,y)
-    move_y = -1
+    yCord = -1
     while (y < 0):
-        x = x - move_x
-        y = y - move_y
+        x = x - xCord
+        y = y - yCord
         painter.goto(x,y)
-    move_y = 1
+    yCord = 1
 
 wn = trtl.Screen()
 wn.mainloop()
