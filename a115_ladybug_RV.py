@@ -48,6 +48,31 @@ while (num_dots <= 2 ):
   xpos = xpos + 5
   num_dots = num_dots + 1
 
+loop = 8 
+length = 70#configure legs
+angle = 360 / loop
+ladybug.pensize(5)
+i = 0 
+while (i < loop):
+  ladybug.goto(0,20)
+  ladybug.setheading(angle * i + 45)
+  ladybug.forward(length)#Draw legs
+  i = i + 1
+
+ladybug.pensize(2)
+ladybug.penup()
+ladybug.pencolor("purple")
+ladybug.goto(30, 0)
+ladybug.pendown()
+ladybug.circle(4)
+ladybug.pensize(2)
+
+ladybug.penup()
+ladybug.pencolor("purple")
+ladybug.goto(35, 10)
+ladybug.pendown()
+ladybug.circle(4)
+
 ladybug.hideturtle()
 
 wn = trtl.Screen()
