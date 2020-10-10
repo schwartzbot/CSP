@@ -15,8 +15,13 @@ spider.pensize(5)
 i = 0 
 while (i < loop):
   spider.goto(0,20)
-  spider.setheading(angle * i + 45)
-  spider.forward(length)#Draw legs
+  if(i % 4 == 0):
+    spider.setheading(angle * i + 35)
+  else:
+    spider.setheading(angle * i - 35)
+  spider.pendown()
+  spider.circle(50, 90)#Draw legs
+  spider.penup()
   i = i + 1
 
 spider.pensize(2)
