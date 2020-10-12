@@ -13,17 +13,17 @@ for s in turtle_shapes:
   t = trtl.Turtle(shape=s)
   my_turtles.append(t)
 
-#  
+#The x and y coordinates where the shapes will be drawn from
 startx = 0
 starty = 0
 
-#
+#for each loop that goes through the my_turtles list
 for t in my_turtles:
   t.goto(startx, starty)
   t.right(45)     
   t.forward(50)
 
-#	
+#change in coordinates after each iteration
   startx = startx + 50
   starty = starty + 50
 
