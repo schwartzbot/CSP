@@ -27,8 +27,8 @@ for t in my_turtles:
   t.pendown()
 
 #change in coordinates after each iteration
-  startx = startx + 50
-  starty = starty + 50
+  startx = t.xcor() + 50
+  starty = t.ycor()  + 50
 
 wn = trtl.Screen()
 wn.mainloop()
