@@ -6,8 +6,8 @@ import turtle as trtl
 my_turtles = []
 
 # use interesting shapes and colors
-turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
-turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
+turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic", "turtle", "arrow"]
+turtle_colors = ["red", "blue", "green", "orange", "purple", "gold", "cyan", "Magenta"]
 
 for s in turtle_shapes:
   newColor = turtle_colors.pop()
@@ -20,17 +20,19 @@ for s in turtle_shapes:
 #The x and y coordinates where the shapes will be drawn from
 startx = 0
 starty = 0
-
+heading = 90
 #for each loop that goes through the my_turtles list
 for t in my_turtles:
   t.goto(startx, starty)
-  t.right(45)     
-  t.forward(50)
+  t.setheading(heading)
   t.pendown()
+  t.right(45) 
+  t.forward(50)
 
 #change in coordinates after each iteration
-  startx = t.xcor() + 50
-  starty = t.ycor()  + 50
+  startx = t.xcor()
+  starty = t.ycor()
+  heading = t.heading()
 
 wn = trtl.Screen()
 wn.mainloop()
