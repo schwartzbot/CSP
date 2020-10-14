@@ -10,7 +10,9 @@ turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
 turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
 
 for s in turtle_shapes:
-  t = trtl.Turtle(shape=s)
+  newColor = turtle_colors.pop()
+  t = trtl.Turtle(shape=s) 
+  t.color(newColor)
   my_turtles.append(t)
   t.penup()
   
