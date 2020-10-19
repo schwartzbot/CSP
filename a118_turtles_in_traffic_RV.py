@@ -36,13 +36,27 @@ for s in turtle_shapes:
 # TODO: move turtles across and down screen, stopping for collisions
 
 steps = 0
-while steps < 50:
-	steps = steps + 1
-ht.xcor()
-ht.ycor
+pixel_size = 10
 
-vt.xcor()
-vt.ycor
+while steps < 50:
+    steps = steps + 1
+    for ht in horiz_turtles:
+
+        for vt in vert_turtles:
+
+            ht.forward(3)
+            vt.forward(3)
+            if (abs(ht.xcor() - vt.xcor()) < pixel_size):
+                if (abs(ht.ycor() - vt.ycor()) < pixel_size):
+                    vert_turtles.remove(vt)
+                    horiz_turtles.remove(ht) 
+
+###### code segment #####
+
+
+###### code segment #####
+
+
 
 wn = trtl.Screen()
 wn.mainloop()
