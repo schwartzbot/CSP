@@ -34,11 +34,15 @@ for s in turtle_shapes:
   tloc += 50
 
 # TODO: move turtles across and down screen, stopping for collisions
-"""
+
 steps = 0
 while steps < 50:
 	steps = steps + 1
-"""
+ht.xcor()
+ht.ycor
+
+vt.xcor()
+vt.ycor
 
 wn = trtl.Screen()
 wn.mainloop()
