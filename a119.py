@@ -2,7 +2,6 @@ import turtle as trtl
 
 painter = trtl.Turtle()
 painter.speed(50)
-painter.color("navy")
 painter.pensize(5)
 
 loop = 0
@@ -11,7 +10,9 @@ objectList = ["Background", "Mountains", "grass", "building", "roof", "windows",
 
 for thing in objectList:
     if thing == "Background":
-        painter.shape("square")
+        painter.color("cyan")
+        painter.fillcolor("cyan")
+        painter.circle(200)
     while (loop < 10):
         painter.goto(0,0)
         painter.right(200 / (spiral))
@@ -21,9 +22,9 @@ for thing in objectList:
         painter.circle(15)
         painter.penup()
         loop = loop + 1
-        if (loop % 5 == 0):
+        if (loop % 2 == 0):
             painter.color("Yellow")
-        if (loop % 10 == 0):
+        if (loop % 2 == 1):
             painter.color("Orange")
 
 wn = trtl.Screen()
