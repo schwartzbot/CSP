@@ -53,6 +53,13 @@ for thing in objectList:
             painter.circle(50, 90)#Draw legs
             painter.penup()
             i = i + 1
+    elif thing == "grass":
+        painter.color("green")
+        painter.goto(0, -2000)
+        painter.fillcolor("green")
+        painter.begin_fill()
+        painter.circle(1000)
+        painter.end_fill()
 
 wn = trtl.Screen()
 wn.mainloop()
