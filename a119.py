@@ -118,5 +118,28 @@ for thing in objectList:
         painter.forward(30)
         painter.right(60)
         painter.forward(30)
+        painter.right(180)
+        painter.forward(30)
+        painter.right(60)
+        painter.forward(50)
+        painter.right(60)
+        painter.forward(50)
+        painter.right(180)
+        painter.forward(50)
+        painter.right(60)
+        painter.forward(50)
+        painter.right(180)
+        painter.forward(30)
+        painter.right(60)
+    elif thing == "turtle":
+        painter.penup()
+        painter.goto(100, -200)
+        painter.pendown
+        painter.color("cyan")
+        painter.shape("turtle")
+        painter.speed(1)
+        painter.goto(-100, -200)
+        
+
 wn = trtl.Screen()
 wn.mainloop()
