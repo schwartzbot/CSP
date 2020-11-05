@@ -8,6 +8,7 @@
 #-----import statements-----
 import turtle as trtl
 import random as rand
+import leaderboard as lb
 
 #-----game configuration-----
 # To view in trinket change the values of font_size, spot_size, and 
@@ -16,11 +17,37 @@ colors = ["black", "sky blue", "salmon", "orchid", "pale green"]
 font_setup = ("Arial", 20, "normal")
 spot_size = 2
 spot_color = 'pink'
-spot_shape = "turtle"
+spot_shape = "circle"
 timer = 30
 counter_interval = 1000 
 timer_up = False
 score = 0
+
+# manages the leaderboard for top 5 scorers
+def manage_leaderboard():
+  
+  global leader_scores_list
+  global leader_names_list
+  global score
+  global spot
+
+  # load all the leaderboard records into the lists
+  lb.load_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list)
+
+  # TODO
+  if (len(leader_scores_list) < 5 or score > leader_scores_list[4]):
+    lb.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
+    lb.draw_leaderboard(leader_names_list, leader_scores_list, True, spot, score)
+
+  else:
+    lb.draw_leaderboard(leader_names_list, leader_scores_list, False, spot, score)
+
+
+#add leaderboard variables
+leaderboard_file_name = "a122_leaderboard.txt "
+leader_names_list = []
+leader_scores_list = []
+player_name = input("Enter your name")
 
 #-----initialize the turtles-----
 spot = trtl.Turtle() 
@@ -51,6 +78,7 @@ def countdown():
   if timer <= 0:
     counter.write("Time's Up", font=font_setup)
     timer_up = True
+    manage_leaderboard()
   else:
     counter.write("Timer: " + str(timer), font=font_setup)
     timer -= 1
@@ -74,14 +102,14 @@ def spot_clicked(x,y):
   
 # resize the turtle
 def resize():
-  sizes = [.5, 1, 1.5, 2]
+  sizes = [1, 1.5, 2]
   spot.shapesize(rand.choice(sizes))
 
 # stamp turtle
 def leave_a_mark():
   spot.fillcolor(rand.choice(colors[1:]))
-  spot.stamp()
-  spot.fillcolor(colors[0]) # comment out for more a more difficult game
+  #spot.stamp()
+  #spot.fillcolor(colors[0]) # comment out for more a more difficult game
 
 # change the position of spot
 def change_position():
