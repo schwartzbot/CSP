@@ -42,7 +42,6 @@ def manage_leaderboard():
   else:
     lb.draw_leaderboard(leader_names_list, leader_scores_list, False, spot, score)
 
-
 #add leaderboard variables
 leaderboard_file_name = "a122_leaderboard.txt "
 leader_names_list = []
