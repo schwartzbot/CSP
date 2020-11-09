@@ -22,10 +22,25 @@ def applFall(active_apple):
   ycor = active_apple.ycor()
   active_apple.penup()
   active_apple.goto(xcor, -150)
+  active_apple.clear()
+  active_apple.hideturtle()
+
+def userI (active_apple):
+  
+  active_apple.color("blue")
+  active_apple.write("Press 'A'", font=("Arial", 20, "bold"))
+  
 
 
 #-----function calls-----
 draw_apple(apple)
-applFall(apple)
 
+#wn.tracer(False)
+#userI(apple)
+#wn.tracer(True)
+
+wn.onkeypress(applFall(apple), "a")
+
+
+wn.update() 
 wn.mainloop()
