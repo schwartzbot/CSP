@@ -17,8 +17,15 @@ def draw_apple(active_apple):
   active_apple.shape(apple_image)
   wn.update()
 
+def applFall(active_apple):
+  xcor = active_apple.xcor()
+  ycor = active_apple.ycor()
+  active_apple.penup()
+  active_apple.goto(xcor, -150)
+
 
 #-----function calls-----
 draw_apple(apple)
+applFall(apple)
 
 wn.mainloop()
