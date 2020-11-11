@@ -30,17 +30,22 @@ def userI (active_apple):
   active_apple.color("blue")
   active_apple.write("Press 'A'", font=("Arial", 20, "bold"))
   
-
+def dropAppl():
+  applFall(apple)
 
 #-----function calls-----
 draw_apple(apple)
 
-#wn.tracer(False)
-#userI(apple)
-#wn.tracer(True)
+wn.tracer(False)
+userI(apple)
+wn.tracer(True)
 
-wn.onkeypress(applFall(apple), "a")
+wn.onkeypress(dropAppl, "a")
 
+
+
+wn.listen()
 
 wn.update() 
+
 wn.mainloop()
